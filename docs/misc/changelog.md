@@ -27,11 +27,13 @@
 - Improved test coverage for `save_util.py`: added tests for `BadZipFile` error handling in `load_from_zip_file` and `IsADirectoryError`/`FileNotFoundError` handling in `open_path`
 - Fixed Docker build by adding the missing `--system` flag to `uv pip uninstall opencv-python` (required by recent `uv`)
 - Added a warning when `n_steps > 1` is passed together with a custom `replay_buffer_class`, as `n_steps` is only applied when the replay buffer class is selected automatically (@Koustav-github)
+- Updated tests dependencies
 
 ### Documentation:
 
 - Clarified in the `n_steps` docstring that it only applies when `replay_buffer_class` is `None`, and that a custom replay buffer must be configured with `replay_buffer_kwargs={"n_steps": ..., "gamma": ...}` (@Koustav-github)
 - Updated algorithm table (added the ones from SBX and sorted the table)
+- Fixed typos, grammar, and Gymnasium API inconsistencies across documentation
 
 ## Release 2.9.0 (2026-06-15)
 
